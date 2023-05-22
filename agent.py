@@ -18,8 +18,8 @@ class OstAgent():
     def process_payoffs(self, a_pos, dollar_payoffs, fine_vector, game_payoffs, verbose):
         '''Stores game payoff and uses self and others game payoff to calculate utility.'''
         own_dpo = dollar_payoffs[a_pos]
-        self.all_fines.append(fine_vector[a_pos])
         self.all_game_payoffs.append(game_payoffs[a_pos])
+        self.all_fines.append(fine_vector[a_pos])
         self.dollar_payoffs.append(own_dpo)
         #Calculating felicity:
         other_dpo = copy(dollar_payoffs)
